@@ -1,0 +1,15 @@
+name = "visitorcount"
+workers_dev = true
+compatibility_date = "2023-09-04"
+main = "build/worker/shim.mjs"
+
+kv_namespaces = [
+    { binding = "visitorcount", id = "a04c6dcdac164a53b397ea6cb8590308", preview_id = "35048497be594ce6956c53771469f187" },
+]
+
+
+[vars]
+WORKERS_RS_VERSION = "0.0.18"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
